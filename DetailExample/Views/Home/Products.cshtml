@@ -1,0 +1,30 @@
+﻿@using DetailExample.Models;
+@model List<Product>
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<h2>Products</h2>
+<hr />
+
+<!-- Placér liste af pruducts -->
+
+@foreach (Product product in Model)
+{
+    <a href="/Home/ShowProduct/@product.ProductID">
+        <table class="productListItem">
+            <tr>
+                <td>
+                    @product.Name
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="~/Content/Images/Products/@product.Image" />
+                </td>
+            </tr>
+        </table>
+    </a>
+}
+<div class="clear"></div>

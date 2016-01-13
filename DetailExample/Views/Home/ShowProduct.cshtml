@@ -1,0 +1,50 @@
+﻿@model DetailExample.Models.Product
+
+@{
+    ViewBag.Title = "ShowProduct";
+}
+
+<h2>ShowProduct</h2>
+<hr />
+
+<div id="productImage">
+    <img src="~/Content/Images/Products/@Model.Image" />
+</div>
+<div id="productInfo">
+    <table>
+        <tr>
+            <td>
+                Product Name
+            </td>
+            <td>
+                @Model.Name
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Price
+            </td>
+            <td>
+                @Model.Price
+            </td>
+        </tr>
+        <tr>
+            <td>
+                In Storage
+            </td>
+            <td>
+                @Model.InStorage
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Description
+            </td>
+            <td>
+                @Model.Description
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="clear"></div>
+

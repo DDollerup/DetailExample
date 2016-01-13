@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+    <link href="~/Content/CSS/Layout.css" rel="stylesheet" />
+</head>
+<body class="nomargin nopadding">
+    <div id="bodyWrapper" class="center">
+        <header>
+            <h1>
+                My Product Site
+            </h1>
+        </header>
+        <nav>
+            <a href="/Home/Index">Home</a>
+        </nav>
+        <section>
+            @RenderBody()
+        </section>
+        <footer>
+            Contact Info here
+        </footer>
+    </div>
+</body>
+</html>
