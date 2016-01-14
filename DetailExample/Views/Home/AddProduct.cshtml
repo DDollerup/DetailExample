@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "AddProduct";
+}
+
+@if (TempData["MSG"] != null)
+{
+    @TempData["MSG"]
+}
+
+<h2>AddProduct</h2>
+<hr />
+
+<form action="/Home/AddProduct" method="post" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>
+                Product Name:
+            </td>
+            <td>
+                <input type="text" name="Name" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Product Price:
+            </td>
+            <td>
+                <input type="number" name="Price" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Product Description:
+            </td>
+            <td>
+                <input type="text" name="Description" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Product In Store:
+            </td>
+            <td>
+                <input type="checkbox" name="InStorage" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Product Image:
+            </td>
+            <td>
+                <input type="file" name="file" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Add Product" />
+            </td>
+        </tr>
+    </table>
+</form>

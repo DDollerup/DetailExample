@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\CSS\Layout.css" />
+    <Content Include="Content\Images\ComingSoon\coming_soon.png" />
     <Content Include="Content\Images\Products\shoe1.jpg" />
     <Content Include="Content\Images\Products\shoe2.jpg" />
     <Content Include="Content\Images\Products\shoe3.jpg" />
@@ -115,6 +116,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Products.cshtml" />
     <Content Include="Views\Home\ShowProduct.cshtml" />
+    <Content Include="Views\Home\AddProduct.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

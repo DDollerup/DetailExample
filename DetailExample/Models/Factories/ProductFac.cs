@@ -48,9 +48,30 @@ namespace DetailExample.Models.Factories
             }
         };
 
+        List<Product> tempSessionList = new List<Product>();
+
+        private HttpContextBase Context { get; set; }
+
+        public ProductFac(HttpContextBase context)
+        {
+            this.Context = context;
+
+            if (Context.Session["SessionProduct"] != null)
+            {
+                this.products = Context.Session["SessionProduct"] as List<Product>;
+            }
+        }
+
         public List<Product> Products()
         {
             return products;
+        }
+
+        public void AddProduct(Product productToAdd)
+        {
+            productToAdd.ProductID = products.Count + 1;
+            products.Add(productToAdd);
+            Context.Session["SessionProduct"] = products;
         }
     }
 }
